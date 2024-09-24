@@ -1,52 +1,77 @@
-// script.js
-document.getElementById("chat-form").onsubmit = function (e) {
-    e.preventDefault();
+document.getElementById('chat-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const userInput = document.getElementById('user-input').value;
+    const chatMessages = document.getElementById('chat-messages');
 
-    let userInput = document.getElementById("user-input").value;
-    if (userInput.trim() === "") return;
+    // Add user message to the chat
+    chatMessages.innerHTML += `<div>You: ${userInput}</div>`;
 
-    // Display user message in chat
-    addMessageToChat("You", userInput);
-
-    // Send query to Flask backend
-    fetch('http://127.0.0.1:5000/query', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ query: userInput }),
-    })
-    .then(response => response.json())
+    // Fetch the knowledge base JSON files from the new endpoints
+    Promise.all([
+        fetch('/knowledge_base/faq').then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load FAQ data');
+            }
+            return response.json();
+        }),
+        fetch('/knowledge_base/course_catalog').then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load course catalog');
+            }
+            return response.json();
+        }),
+        fetch('/knowledge_base/program_info').then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to load program info');
+            }
+            return response.json();
+        })
+    ])    
     .then(data => {
-        // Display bot response in chat
-        addMessageToChat("ChatCat", data.response);
+        const faqs = data[0].faqs; // Access the faqs array directly
+        const courseCatalog = data[1].courses; // Adjust based on your actual JSON structure
+        const programInfo = data[2].programs; // Adjust based on your actual JSON structure
+    
+        const answer = getAnswer(userInput, faqs, courseCatalog, programInfo);
+        if (answer) {
+            chatMessages.innerHTML += `<div>ChatCat: ${answer}</div>`;
+        } else {
+            chatMessages.innerHTML += `<div>ChatCat: Sorry, I couldn't find an answer!</div>`;
+        }
     })
     .catch(error => {
-        console.error('Error:', error);
-        addMessageToChat("ChatCat", "Sorry, something went wrong!");
+        console.error('Error fetching knowledge base:', error);
+        chatMessages.innerHTML += `<div>ChatCat: Sorry, something went wrong!</div>`;
     });
 
-    // Clear the input field
-    document.getElementById("user-input").value = "";
-};
+    // Clear the input
+    document.getElementById('user-input').value = '';
+});
 
-// Function to add messages to chat
-function addMessageToChat(sender, message) {
-    const chatMessages = document.getElementById("chat-messages");
+// Function to find the answer based on the user input
+function getAnswer(userInput, faqs, courseCatalog, programInfo) {
+    const normalizedInput = userInput.toLowerCase();
 
-    let messageElement = document.createElement("div");
-    messageElement.classList.add("message");
-
-    // Differentiate user and bot messages
-    if (sender === "You") {
-        messageElement.classList.add("user-message");
-    } else {
-        messageElement.classList.add("bot-message");
+    // Check FAQs
+    for (const faq of faqs) {
+        if (normalizedInput.includes(faq.question.toLowerCase())) {
+            return faq.answer;
+        }
     }
 
-    messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
-    chatMessages.appendChild(messageElement);
+    // Check Course Catalog
+    for (const course of courseCatalog) {
+        if (normalizedInput.includes(course.title.toLowerCase())) {
+            return course.description; // Adjust based on your course structure
+        }
+    }
 
-    // Auto scroll to the latest message
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    // Check Program Info
+    for (const program of programInfo) {
+        if (normalizedInput.includes(program.name.toLowerCase())) {
+            return program.details; // Adjust based on your program structure
+        }
+    }
+
+    return null; // No answer found
 }

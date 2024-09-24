@@ -68,3 +68,27 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+#logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center align */
+    margin: 0 auto; /* Center horizontally */
+}
+
+h1 {
+    text-align: center; /* Center the header text */
+    font-size: 24px; /* Adjust font size */
+    color: #333; /* Set text color */
+    margin: 20px 0; /* Add some margin above and below */
+}
+
+
+h2 {
+    text-align: center; /* Center the header text */
+    font-size: 24px; /* Adjust font size */
+    color: #333; /* Set text color */
+    margin: 20px 0; /* Add some margin above and below */
+}
+
+
