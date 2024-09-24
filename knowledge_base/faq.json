@@ -1,0 +1,12 @@
+{
+    "faqs": [
+        {
+            "question": "What is the SFWE program?",
+            "answer": "The SFWE program is a software engineering program at the University of Arizona."
+        },
+        {
+            "question": "How do I apply?",
+            "answer": "You can apply through the university's admissions portal."
+        }
+    ]
+}
