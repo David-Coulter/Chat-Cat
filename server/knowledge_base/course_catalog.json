@@ -1,12 +1,384 @@
 {
-    "courses": [
-        {
+      "train": [
+          {
+            "code": "SFWE 101",
             "title": "Introduction to Software Engineering",
-            "description": "Learn the fundamentals of software engineering."
-        },
-        {
-            "title": "Advanced Algorithms",
-            "description": "Study advanced algorithm design and analysis."
-        }
-    ]
+            "units": 3,
+            "description": "This course introduces students to the different software development lifecycle (SDLC) phases used in developing, delivering, and maintaining software products. Students will also acquire basic software development skills and understand common terminology used in the software engineering profession. Students will also learn and practice using traditional coding standards/guidelines. Python software development libraries and debugging tools will be explored and used in projects to familiarize students with basic tasks involved in modifying, building, and testing software. The course will also lay the foundation for achieving academic and career success in Software Engineering.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "lecture": "Required"
+            },
+            "offering": {
+              "main_campus": "Spring",
+              "online_campus": ["Fall", "Spring"],
+              "distance_campus": "Spring"
+            },
+            "enrollment_requirement": "Prerequisite MATH 112 or higher or placement into courses that have a Math 112 prerequisite (Math 112, 120R, 122B, or 125, or placement at the level of Math 120R)."
+          },
+          {
+            "code": "SFWE 201",
+            "title": "Software Engineering Sophomore Colloquium",
+            "units": 1,
+            "description": "This course is a colloquium designed to help students explore different career opportunities for Software Engineering professionals. Students will interact and learn from professional software engineers while exploring various roles that software engineers play in solving real engineering problems. The course helps students determine focus areas within the SFWE degree program related to specific application areas of interest. Additionally, students will prepare a professional technically focused resume highlighting their skills and experience. Students will explore strategies on how to secure an internship position in diverse industries prior to completing their BS degrees.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "colloquium": "Required"
+            },
+            "offering": {
+              "main_campus": "Fall",
+              "online_campus": ["Fall", "Spring"],
+              "distance_campus": "Fall"
+            },
+            "enrollment_requirement": "SFWE 101 or ECE 175"
+          },
+          {
+            "code": "SFWE 301",
+            "title": "Software Requirements Analysis and Test",
+            "units": 3,
+            "description": "This course will teach students how to derive and develop software requirements that are measurable, testable and lead to a compliant software design and implementation. Using industry best practices and tools, students will learn how to elicit, analyze, specify, and validate functional and non-functional software requirements. Students will develop software requirements models and specifications that capture the customer / user's needs. They will also develop test plans and test procedures used in a formal software acceptance test to validate that the developed product meets its requirements as specified. In doing so, students will learn and use basic Java language constructs to implement specified requirements. Additionally, students will also learn how to establish and maintain a software requirement configuration baseline, and the processes used to incorporate subsequent changes, updates, and enhancements to the software requirements over time.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "lecture": "Required"
+            },
+            "offering": {
+              "main_campus": ["Fall", "Spring"],
+              "online_campus": "Fall",
+              "distance_campus": ["Fall", "Spring"]
+            },
+            "enrollment_requirement": "Advanced Standing in Engineering. ECE 275.",
+            "writing_emphasis": "Writing Emphasis Course"
+          },
+          {
+            "code": "SFWE 302",
+            "title": "Software Architecture & Design",
+            "units": 3,
+            "description": "At the heart of every well-engineered software system is its software architecture and design. Software architecture deals with the high-level building blocks that represent an underlying software system. These building blocks are the components (units of computation in a system), the connectors (models of the interactions between software components), and the configurations (arrangements of software components and connectors, and the rules that guide their composition).",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "lecture": "Required"
+            },
+            "offering": {
+              "main_campus": "Spring",
+              "online_campus": "Spring",
+              "distance_campus": "Spring"
+            },
+            "enrollment_requirement": "Advanced Standing: Engineering. SFWE 301."
+          },
+          {
+            "code": "SFWE 401",
+            "title": "Software Assurance and Security",
+            "units": 3,
+            "description": "Software plays a vital role in modern life, managing essential services, like the financial systems, social networks, the Internet, and Cyber-Physical Systems, to name a few. Modern software must be bug-free, secure, and function reliably while controlling our critical systems. Software Assurance is the level of confidence in software being free of intentional or accidental vulnerabilities (including flaws, faults, and bugs) inserted at any time during its lifecycle.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "lecture": "Required"
+            },
+            "co_convened_with": "SFWE 501",
+            "offering": {
+              "main_campus": "Spring",
+              "online_campus": "Spring",
+              "distance_campus": "Spring"
+            },
+            "enrollment_requirement": "Advanced Standing: Engineering. ECE 275."
+          },
+          {
+            "code": "SFWE 402",
+            "title": "Software DevSecOps",
+            "units": 4,
+            "description": "This course will allow software engineering students to explore key principles of a DevSecOps approach to software development. Development (Dev) and operations (Ops) is the union of people, process, and technology to continually automate and develop higher quality/more reliable software products faster. Security (Sec) is integrated into a typical DevOps pipeline to address potential security issues in code as soon as possible in the software development lifecycle.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "laboratory": "Required"
+            },
+            "lecture_co_convened_with": "SFWE 502",
+            "offering": {
+              "main_campus": "Fall",
+              "online_campus": "Fall",
+              "distance_campus": "Fall"
+            },
+            "recommendations": "SFWE 401 Recommended prior to taking this course.",
+            "enrollment_requirement": "Advanced Standing in Engineering. ECE 275."
+          },
+          {
+            "code": "SFWE 403",
+            "title": "Software Project Management",
+            "units": 3,
+            "description": "This course will teach software engineering students how to plan, track and communicate the status of large-scale software projects to a diverse group of stakeholders. Using modern traditional and Agile software development methodologies and tools, and emulating a realistic software development project, students will be immersed in the activities used by industry to develop, manage, and monitor the development of a software product throughout the semester. Students will learn why planning a software project is important, what constitutes a good plan, how to adapt to the unexpected and unknowns that are likely to occur throughout the project development, and how to track and share the status of the project with their team members, other teams, and the customers/business managers. They will also learn how to monitor and track cost expenditures and compare against allocated budgets. Along the way, students will learn the importance of identifying risks and how to develop mitigation plans to address those risks, learn the role that software quality plays in project management, and have the opportunity to develop/hone their leadership and team collaboration skills while being part of an Agile team.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "lecture": "Required"
+            },
+            "co_convened_with": "SFWE 503",
+            "offering": {
+              "main_campus": "Fall",
+              "online_campus": "Fall",
+              "distance_campus": "Fall"
+            },
+            "recommendations": "SFWE 302 recommended prior to enrollment.",
+            "enrollment_requirement": "Advanced Standing: Engineering. SFWE 301."
+          },
+          {
+            "code": "SFWE 407",
+            "title": "Foundations of Software Engineering",
+            "units": 3,
+            "description": "This course will provide students with the foundational skills and knowledge used by software engineers in diverse industries. Students will understand what software engineering is and why it is more than `just writing code'. The course introduces students to the different software development lifecycle (SDLC) phases used in developing, delivering, and maintaining software products for a wide variety of applications. Common software process models will be introduced, along with developing an understanding of the importance of defining software requirements, developing software architectures and designs, and the various forms of testing that go into delivering reliable and resilient software systems.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": {
+              "lecture": "Required"
+            },
+            "co_convened_with": "SFWE 507",
+            "offering": {
+              "main_campus": "Fall",
+              "online_campus": "Fall",
+              "distance_campus": "Fall"
+            },
+            "recommendations": "SFWE 301 recommended prior to enrollment.",
+            "enrollment_requirement": "Advanced Standing in Engineering. SFWE 301."
+          },
+          {
+            "code": "SFWE 411",
+            "title": "Software for Industrial Control Systems",
+            "units": 3,
+            "description": "The increased connectivity due to the rise of the Internet and the growth of smart connected devices (Internet of Things) has brought rapid changes in cyber physical systems operational in many areas including manufacturing, healthcare, transportation, power system, home automation, etc. These changes, dubbed as the Fourth Industrial Revolution (4IR), amalgamate artificial intelligence, advanced robotics, smart sensors, and communication networks, blurring lines between the physical, digital, and biological worlds to automate industrial processes. At the forefront of this revolution are connected Industrial Control Systems (ICS), a group of control systems and associated instrumentation, which include the devices, systems, networks, and controls used to operate and/or automate industrial processes. As ICS and automation become more critical components of our digital world, it will be critical for engineers to know to design, develop, control, and manage these ICS. Moreover, the engineers will not just design and develop optimized ICS; they will also have to ensure their security from cyberattacks.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components":
+              {
+                "component": "Lecture",
+                "required": true
+              },
+            "co_convened_with": "SFWE 511",
+            "offering": {
+              "main_campus": "Fall",
+              "online_campus": "Fall",
+              "distance_campus": "Fall"
+            },
+            "enrollment_requirement": "ECE 275 and SFWE 401."
+          },
+          {
+            "code": "SFWE 491",
+            "title": "Software Engineering Preceptor",
+            "units": 1,
+            "description": "This course provides the opportunity for software engineering majors to work in engineering courses/labs with students taking ECE 175, ECE 275, SFWE 101, CSC 355, SFWE 301 or other similar courses (any of these courses may be referred to as \"host course\" in other parts of this syllabus). The students in this course, also known as \"preceptors\", will help students in a host course set up their software development environments and tools, work on related course projects as defined by the host course instructor, and provide guidance and help with designing, implementing, debugging/integration testing software developed for those projects.",
+            "grading_basis": "Alternative Grading: S, P, F",
+            "career": "Undergraduate",
+            "course_components": 
+              {
+                "component": "Independent Study",
+                "required": true
+              },
+            "repeatable": "Course can be repeated a maximum of 3 times.",
+            "offering": {
+              "main_campus": "Fall, Spring",
+              "online_campus": "Fall, Spring",
+              "distance_campus": "Fall, Spring"
+            },
+            "recommendations": "Successful completion of the course with a minimum of a B that the student is a preceptor for.",
+            "enrollment_requirement": "Adv Stdg: Engineering. Major: SFEBSSFE."
+          },
+          {
+            "course_code": "SFWE 492",
+            "title": "Directed Research",
+            "units": "1 - 6",
+            "description": "Individual or small group research under the guidance of faculty.",
+            "grading_basis": "Regular Grades",
+            "career": "Undergraduate",
+            "course_components": 
+              {
+                "component": "Independent Study",
+                "required": true
+              },
+            "repeatable": "Course can be repeated a maximum of 2 times.",
+            "offering": {
+              "main_campus": "Fall, Spring",
+              "online_campus": "Fall, Spring",
+              "distance_campus": "Fall, Spring"
+            },
+            "recommendations": "Department Consent Required.",
+            "enrollment_requirement": "Adv Stdg: Engineering."
+          },
+          {
+            "code": "SFWE 501",
+            "title": "Software Assurance and Security",
+            "units": 3,
+            "description": "Software plays a vital role in modern life, managing essential services, like the financial systems, social networks, the Internet, and Cyber-Physical Systems, to name a few. Modern software must be bug-free, secure, and function reliably while controlling our critical systems. Software Assurance is the level of confidence in software being free of intentional or accidental vulnerabilities (including flaws, faults, and bugs) inserted at any time during its lifecycle.",
+            "grading_basis": "Regular Grades",
+            "career": "Graduate",
+            "course_components": 
+              {
+                "component": "Lecture",
+                "required": true
+              },
+            "co_convened_with": "SFWE 401",
+            "offering": {
+              "main_campus": "Spring",
+              "online_campus": "Spring"
+            }
+          },
+          {
+            "code": "SFWE 502",
+            "title": "Software DevSecOps",
+            "units": 4,
+            "description": "This course will allow software engineering students to explore key principles of a DevSecOps approach to software development. Development (Dev) and operations (Ops) is the union of people, process, and technology to continually automate and develop higher quality/more reliable software products faster. Security (Sec) is integrated into a typical DevOps pipeline to address potential security issues in code as soon as possible in the software development lifecycle.",
+            "grading_basis": "Regular Grades",
+            "career": "Graduate",
+            "course_components": [
+              {
+                "component": "Laboratory",
+                "required": true
+              },
+              {
+                "component": "Lecture",
+                "required": true
+              }
+            ],
+            "co_convened_with": "SFWE 402",
+            "offering": {
+              "main_campus": "Fall"
+            },
+            "recommendations": "ECE 275 recommended prior to enrollment."
+          },
+          {
+            "code": "SFWE 503",
+            "title": "Software Project Management",
+            "units": 3,
+            "description": "This course will teach software engineering students how to plan, track and communicate the status of large-scale software projects to a diverse group of stakeholders. Using modern traditional and Agile software development methodologies and tools, and emulating a realistic software development project, students will be immersed in the activities used by industry to develop, manage, and monitor the development of a software product throughout the semester. Students will learn why planning a software project is important, what constitutes a good plan, how to adapt to the unexpected and unknowns that are likely to occur throughout the project development, and how to track and share the status of the project with their team members, other teams, and the customers/business managers. They will also learn how to monitor and track cost expenditures and compare against allocated budgets. Along the way, students will learn the importance of identifying risks and how to develop mitigation plans to address those risks, learn the role that software quality plays in project management, and have the opportunity to develop/hone their leadership and team collaboration skills while being part of an Agile team.",
+            "grading_basis": "Regular Grades",
+            "career": "Graduate",
+            "course_components": 
+              {
+                "component": "Lecture",
+                "required": true
+              },
+            "co_convened_with": "SFWE 403",
+            "offering": {
+              "main_campus": "Fall"
+            },
+            "recommendations": "SFWE 302(Software Architecture & Design) Recommended prior to enrollment."
+          },
+          {
+            "code": "SFWE 504",
+            "title": "Software Requirements Analysis and Test",
+            "units": 3,
+            "description": "In this course you will learn how to derive and develop software requirements that are measurable, testable and lead to a compliant software design and implementation. Using industry best practices and tools, you will learn how to elicit, analyze, specify, and validate functional requirements (what should the software system do) and non-functional software requirements (how should the software system fulfill the functional requirements). You will develop software requirement models and specifications that capture the customer / user's needs. The requirements will be captured in a commercially available software requirements management tool and exported to create a Software Requirements Specification (SRS). You will also develop a formal Software Test Plan (STP) that can be used in a software acceptance test to validate that the product will meet its requirements as specified. Additionally, you will also establish and maintain a software requirement configuration baseline, utilizing widely adopted industry processes to incorporate any subsequent additions, deletions, and enhancements to the software requirements over its lifecycle.",
+            "grading_basis": "Regular Grades",
+            "career": "Graduate",
+            "course_components":
+              {
+                "component": "Lecture",
+                "required": true
+              },
+            "offering": {
+              "main_campus": "Spring",
+              "online_campus": "Spring"
+            },
+            "enrollment_requirement": "Prerequisite or concurrent enrollment in SFWE 507."
+          },
+          {
+            "code": "SFWE 507",
+            "title": "Foundations of Software Engineering",
+            "units": 3,
+            "description": "This course will provide students with the foundational skills and knowledge used by software engineers in diverse industries. Students will understand what software engineering is and why it is more than just writing code'. The course introduces students to the different software development lifecycle (SDLC) phases used in developing, delivering, and maintaining software products for customers. It covers industry-standard best practices such as the Agile and DevOps approaches, as well as the methods of eliciting and documenting requirements, defining system architectures, conducting risk management, validating and verifying designs and implementations, testing software, and deploying and maintaining software products. Ethical and professional responsibilities associated with software engineering practice will also be discussed throughout the course.",
+            "grading_basis": "Regular Grades",
+            "career": "Graduate",
+            "course_components":
+              {
+                "component": "Lecture",
+                "required": true
+              },
+            "offering": {
+              "main_campus": "Fall"
+            },
+            "enrollment_requirement": "Senior Standing."
+          },
+          {
+            "code": "SFWE 591",
+            "title": "Software Engineering Preceptor",
+            "units": 1,
+            "description": "This course provides the opportunity for software engineering majors to work in engineering courses/labs with students taking ECE 475, ECE 575, SFWE 501, CSC 555, SFWE 601, or other similar courses (any of these courses may be referred to as \"host course\" in other parts of this syllabus). The students in this course, also known as \"preceptors\", will help students in a host course set up their software development environments and tools, work on related course projects as defined by the host course instructor, and provide guidance and help with designing, implementing, debugging/integration testing software developed for those projects.",
+            "grading_basis": "Alternative Grading: S, P, F",
+            "career": "Graduate",
+            "course_components":
+              {
+                "component": "Independent Study",
+                "required": true
+              },
+            "repeatable": "Course can be repeated a maximum of 3 times.",
+            "offering": {
+              "main_campus": "Fall, Spring",
+              "online_campus": "Fall, Spring",
+              "distance_campus": "Fall, Spring"
+            },
+            "recommendations": "Successful completion of the course with a minimum of a B that the student is a preceptor for.",
+            "enrollment_requirement": "Adv Stdg: Engineering. Major: SFEBSSFE."
+          },
+          {
+            "code": "SFWE 592",
+            "title": "Directed Research",
+            "units": "1 - 6",
+            "description": "Individual or small group research under the guidance of faculty.",
+            "grading_basis": "Regular Grades",
+            "career": "Graduate",
+            "course_components":
+              {
+                "component": "Independent Study",
+                "required": true
+              },
+            "repeatable": "Course can be repeated a maximum of 2 times.",
+            "offering": {
+              "main_campus": "Fall, Spring",
+              "online_campus": "Fall, Spring",
+              "distance_campus": "Fall, Spring"
+            },
+            "recommendations": "Department Consent Required.",
+            "enrollment_requirement": "Adv Stdg: Engineering."
+          },
+          {
+            "code": "SFWE 900",
+            "title": "Research",
+            "units": "1 - 9",
+            "description": "Individual research by graduate students.",
+            "grading_basis": "Alternative Grading: S, P, F",
+            "career": "Graduate",
+            "course_components":
+              {
+                "component": "Independent Study",
+                "required": true
+              },
+            "repeatable": "Course can be repeated a maximum of 99 times.",
+            "offering": {
+              "main_campus": "Fall, Spring",
+              "online_campus": "Fall, Spring",
+              "distance_campus": "Fall, Spring"
+            }
+          },
+          {
+            "code": "SFWE 910",
+            "title": "Research for the Master's Thesis",
+            "units": "1 - 16",
+            "description": "Research for the master's thesis (whether library research, laboratory or field observation or research, artistic creation, or thesis writing). Maximum total credit permitted varies with the major department.",
+            "grading_basis": "Alternative Grading: S, P, F",
+            "career": "Graduate",
+            "course_components":
+              {
+                "component": "Independent Study",
+                "required": true
+              },
+            "repeatable": "Course can be repeated a maximum of 99 times.",
+            "offering": {
+              "main_campus": "Fall, Spring",
+              "online_campus": "Fall, Spring",
+              "distance_campus": "Fall, Spring"
+            }
+          }
+        ]
 }

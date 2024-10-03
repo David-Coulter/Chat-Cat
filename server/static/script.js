@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.27/css/arizona-bootstrap.min.css" crossorigin="anonymous"></link>
+
 document.getElementById('chat-form').addEventListener('submit', function(event) {
     event.preventDefault();
     const userInput = document.getElementById('user-input').value;
@@ -14,12 +16,21 @@ document.getElementById('chat-form').addEventListener('submit', function(event) 
             }
             return response.json();
         }),
-        fetch('/knowledge_base/course_catalog').then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to load course catalog');
-            }
-            return response.json();
-        }),
+        fetch('/knowledge_base/course_catalog')
+            .then(response => response.json())
+            .then(courses => {
+                if (Array.isArray(courses)) {  // Check if the response is an array
+                    courses.forEach(course => {
+                        // Process each course here
+                        console.log(course.title);  // Example: log the course title
+                    });
+                } else {
+                    console.error('Expected courses to be an array, but got:', courses);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching knowledge base:', error);
+            }),
         fetch('/knowledge_base/program_info').then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load program info');

@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>University of Arizona SFWE ChatCat</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.27/css/arizona-bootstrap.min.css" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div id="chat-container">
+    <div id="chat-container" class="container">
+        <img src="static/SFWE_logo.png" alt="University of Arizona SFWE Logo" id="sfwelogo" class="img-fluid">
         <h2>Welcome to the SFWE ChatCat</h2>
-        <div id="logo-container">
-            <img src="static/chatcat.png" alt="University of Arizona SFWE ChatCat Logo" id="logo">
+        <div id="logo-container" class="text-center">
+            
         </div>
-        <div id="chat-messages">
+        <div id="chat-messages" class="mb-3">
             <!-- Messages will be dynamically added here -->
         </div>
-        <form id="chat-form">
-            <input type="text" id="user-input" placeholder="Ask the cat!">
-            <button type="submit">Send</button>
+        <form id="chat-form" class="input-group mb-3">
+            <input type="text" id="user-input" class="form-control" placeholder="Ask the cat!">
+            <button type="submit" class="btn btn-primary">Send</button>
         </form>
+        <img src="static/chatcat.png" alt="University of Arizona SFWE ChatCat Logo" id="logo" class="img-fluid">
     </div>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.digital.arizona.edu/lib/arizona-bootstrap/2.0.27/js/arizona-bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
