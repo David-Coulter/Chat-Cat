@@ -1,0 +1,41 @@
+# Virtual Environment
+venv/
+env/
+.venv/
+.env/
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+
+# Large files
+*.dylib
+*.so
+*.dll
+
+# PyTorch specific
+torch/
+torchvision/
+torchaudio/
+
+# Potentially large directories
+lib/
+libs/
+libraries/
