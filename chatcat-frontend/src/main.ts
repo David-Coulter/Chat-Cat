@@ -1,16 +1,5 @@
-// src/main.ts
-import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
-import { provideRouter } from '@angular/router';
-import { Routes } from '@angular/router';
-import { ChatComponent } from './app/chat/chat.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
 
-const routes: Routes = [
-  { path: '', component: ChatComponent }
-];
-
-bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes)
-  ]
-}).catch(err => console.error(err));
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));

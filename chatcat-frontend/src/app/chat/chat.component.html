@@ -1,12 +1,18 @@
 <div id="chat-container" class="container">
   <img [src]="sfweLogo" alt="University of Arizona SFWE Logo" id="sfwelogo" class="img-fluid">
   <h2>Welcome to the SFWE ChatCat</h2>
-  <img [src]="chatcatLogo" alt="University of Arizona SFWE ChatCat Logo" id="chatcatlogo" class="img-fluid">
+  <div class="image-container">
+    <img [src]="chatcatLogo" alt="University of Arizona SFWE ChatCat Logo" id="chatcatlogo" class="img-fluid">
+  </div>
   <div id="chat-messages" class="mb-3">
-      <!-- Messages will be dynamically added here -->
+    <div *ngFor="let message of messages">
+      <p [ngClass]="{'text-right': message.isUser, 'text-left': !message.isUser}">
+        {{ message.text }}
+      </p>
+    </div>
   </div>
   <form id="chat-form" class="input-group mb-3" (ngSubmit)="sendMessage()">
-      <input type="text" id="user-input" class="form-control" placeholder="Ask the cat!" [(ngModel)]="userInput" name="userInput">
-      <button type="submit" class="btn btn-primary">Send</button>
+    <input type="text" id="user-input" class="form-control" placeholder="Ask the cat!" [(ngModel)]="userInput" name="userInput">
+    <button type="submit" class="btn btn-primary">Send</button>
   </form>
 </div>

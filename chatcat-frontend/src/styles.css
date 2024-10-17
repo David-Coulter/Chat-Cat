@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+#chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+#chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#chat-form {
+    display: flex;
+}
+
+#user-input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

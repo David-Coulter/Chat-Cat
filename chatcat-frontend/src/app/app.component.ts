@@ -1,14 +1,10 @@
-// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ChatComponent } from './chat/chat.component';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  template: '<app-chat></app-chat>',
   standalone: true,
-  imports: [RouterModule]
+  imports: [ChatComponent]
 })
-export class AppComponent {
-  title = 'University of Arizona SFWE ChatCat';
-}
+export class AppComponent { }
