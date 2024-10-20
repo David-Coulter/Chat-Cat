@@ -8,7 +8,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ChatService {
-  private apiUrl = 'http://localhost:5000';  // Update this to match your Flask server URL
+  private apiUrl = 'http://localhost:5000'; 
 
   constructor(private http: HttpClient) {}
 

@@ -1,16 +1,21 @@
-// src/main.ts
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter } from '@angular/router';
-import { Routes } from '@angular/router';
-import { ChatComponent } from './app/chat/chat.component';
+import { importProvidersFrom } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
 
-const routes: Routes = [
-  { path: '', component: ChatComponent }
-];
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes)
+    importProvidersFrom(HttpClientModule)
   ]
 }).catch(err => console.error(err));
